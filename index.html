@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./src/output.css" rel="stylesheet" />
+    <title>Obito - Sign Up</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="mx-auto max-w-6xl px-2 sm:px-6 lg:px-8">
+      <div class="relative flex h-16 items-center justify-between">
+        <div
+          class="flex items-center justify-between sm:items-stretch sm:justify-start"
+        >
+          <div class="flex items-center">
+            <img
+              class="h-[40px] w-auto"
+              src="../dist/image/logo-64.png"
+              alt="Obito-Logo"
+            />
+            <a class="mx-auto ml-2 font-bold text-2xl" href="#">Obito</a>
+            <ul class="hidden sm:flex sm:ml-20 space-x-4">
+              <li>
+                <a
+                  class="font-semibold text-base text-(--color-font1) hover:text-gray-700 hover:underline"
+                  href="#"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-base text-(--color-font1) hover:text-gray-700 hover:underline"
+                  href="#"
+                  >Pricing</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-base text-(--color-font1) hover:text-gray-700 hover:underline"
+                  href="#"
+                  >Features</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-base text-(--color-font1) hover:text-gray-700 hover:underline"
+                  href="#"
+                  >Testimonials</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <ul class="ml-auto flex items-center space-x-3">
+          <li class="flex items-center">
+            <img
+              class="h-[20px] w-auto"
+              src="../dist/image/device-message.svg"
+              alt="device-message"
+            />
+            <hr class="w-[2px] h-8 mx-2 bg-gray-200 border-0 rounded-sm" />
+            <button
+              class="hidden sm:block p-1 px-3 m-3 rounded-full outline-gray-200 outline-solid font-semibold text-base hover:bg-(--color-button1) hover:text-(--color-primary) transition duration-300 cursor-pointer"
+            >
+              Sign Up
+            </button>
+            <button
+              class="p-1 px-3 bg-(--color-button1) rounded-full text-(--color-primary) font-semibold text-base hover:outline-gray-200 hover:text-black hover:bg-(--color-primary) hover:outline-solid transition duration-300 cursor-pointer"
+            >
+              My Account
+            </button>
+          </li>
+        </ul>
+        <button
+          class="sm:hidden p-2 rounded-md"
+          id="hamburger"
+          name="hamburger"
+        >
+          <span
+            class="h-[2px] w-[30px] block my-2 bg-black transition duration-300 ease-in-out origin-top-left"
+          ></span>
+          <span
+            class="h-[2px] w-[30px] block my-2 bg-black transition duration-300 ease-in-out"
+          ></span>
+          <span
+            class="h-[2px] w-[30px] block my-2 bg-black transition duration-300 ease-in-out origin-bottom-left"
+          ></span>
+        </button>
+      </div>
+      <div class="hidden sm:hidden" id="mobile-menu">
+        <ul class="flex flex-col space-y-2 p-4 bg-white shadow-md">
+          <li>
+            <a
+              class="text-base text-(--color-font1) font-semibold hover:text-black hover:underline"
+              href="#"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              class="text-base text-(--color-font1) hover:text-black hover:underline"
+              href="#"
+              >Pricing</a
+            >
+          </li>
+          <li>
+            <a
+              class="text-base text-(--color-font1) hover:text-black hover:underline"
+              href="#"
+              >Features</a
+            >
+          </li>
+          <li>
+            <a
+              class="text-base text-(--color-font1) hover:text-black hover:underline"
+              href="#"
+              >Testimonials</a
+            >
+          </li>
+          <li>
+            <button
+              class="p-1 px-3 rounded-full bg-(--color-button1) text-(--color-primary) font-semibold text-base hover:text-black hover:bg-(--color-primary) transition duration-300 cursor-pointer"
+            >
+              Sign Up
+            </button>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+   
+    <section class="bg-(--color-second) w-full flex">
+        <div class="flex-1 flex justify-center items-center mt-8 ml-4">
+          <div class="bg-white border border-gray-200 rounded-lg shadow-sm p-6 w-full max-w-md">
+            <!-- Form -->
+            <form class="space-y-6">
+              <h5 class="text-xl font-bold text-gray-900">Upgrade Your Skills</h5>
+              <div class="flex space-y-4">
+                <!-- Input Gambar -->
+                <label for="photoInput" class="cursor-pointer">
+                  <div class="w-24 h-24 rounded-full border-2 border-gray-300 flex items-center justify-center overflow-hidden bg-gray-100">
+                    <img id="photoPreview" class="w-full h-full object-cover hidden" />
+                    <span id="addPhotoText" class="text-gray-900 text-sm font-semibold text-center">Add <br> Photo</span>
+                  </div>
+                </label>
+                <input type="file" id="photoInput" class="hidden" accept="image/*">
+                <div class="w-full flex items-center ml-3 ">
+                    <button id="deletePhoto" class="hidden w-28 h-8 bg-(--color-button2) text-(--color-font2) text-xs font-semibold rounded-full  hover:bg-red-600 hover:text-white transition duration-300 cursor-pointer ">
+                        Delete Photo
+                    </button>
+                </div>
+              </div>
+      
+              <div>
+                <label for="input-group-1" class="block mb-2 text-sm font-medium text-gray-900 ">Complete Name</label>
+                <div class="relative mb-6">
+                    <div class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
+                        <img src="../dist/image/profile.svg" alt="icon-people">
+                    </div>
+                    <input type="text" id="input-group-1" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-full   block w-full ps-10 p-2.5" placeholder="Type your valid email address">
+                </div>
+              </div>
+
+              <div>
+                <label for="input-group-2" class="block mb-2 text-sm font-medium text-gray-900 ">Occupation</label>
+                <div class="relative mb-6">
+                    <div class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
+                        <img src="../dist/image/briefcase.svg" alt="icon-briefcase">
+                    </div>
+                    <input type="text" id="input-group-2" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm  placeholder-gray-900 font-semibold  block w-full ps-10 p-2.5" placeholder="Programmer">
+                </div>
+              </div>
+      
+              <div>
+                <label for="input-group-3" class="block mb-2 text-sm font-medium text-gray-900 ">Email Address</label>
+                <div class="relative mb-6">
+                    <div class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
+                        <img src="../dist/image/sms.svg" alt="icon-sms">
+                    </div>
+                    <input type="email" id="input-group-3" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-full   block w-full ps-10 p-2.5" placeholder="Type your valid email address">
+                </div>
+              </div>
+
+              <div>
+                <label for="input-group-4" class="block mb-2 text-sm font-medium text-gray-900 ">Password</label>
+                <div class="relative mb-6">
+                    <div class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
+                        <img src="../dist/image/shield-security.svg" alt="icon-security">
+                    </div>
+                    <input type="password" id="input-group-4" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-full   block w-full ps-10 p-2.5" placeholder="Type your valid email address">
+                </div>
+              </div>
+              
+              <div>
+                <label for="input-group-5" class="block mb-2 text-sm font-medium text-gray-900 ">Confirm Password</label>
+                <div class="relative mb-6">
+                    <div class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
+                        <img src="../dist/image/shield-security.svg" alt="icon-security">
+                    </div>
+                    <input type="password" id="input-group-5" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-full   block w-full ps-10 p-2.5" placeholder="Type your valid email address">
+                </div>
+              </div>
+      
+                <button
+                class="w-full p-2 bg-(--color-button1) rounded-full text-(--color-primary) font-semibold text-base hover:outline-gray-200 hover:text-black hover:bg-(--color-primary) hover:outline-solid transition duration-300 cursor-pointer"
+                 >
+                Create My Account
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="flex-1 relative">
+          <img src="../dist/image/banner.png" alt="Banner" class="absolute inset-0 w-full h-full object-cover">
+        </div>
+    </section>
+      
+    <script src="../dist/js/script.js"></script>
+  </body>
+</html>

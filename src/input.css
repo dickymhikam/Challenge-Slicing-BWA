@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+@theme {
+    --color-primary : #FFFFFF;
+    --color-second: #D9D9D9;
+    --color-button1: #2F6A62;
+    --color-button2: #FFE3E1;
+    --color-font1: #0A0723;
+    --color-font2: #EF372B;
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+#hamburger span {
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+  
+.hamburger-active span:nth-child(1) {
+    transform: rotate(45deg);
+}
+
+.hamburger-active span:nth-child(2) {
+    transform: scale(0); 
+}
+  
+.hamburger-active span:nth-child(3) {
+    transform: rotate(-45deg);
+}
